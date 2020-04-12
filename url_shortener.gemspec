@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version     = UrlShortener::VERSION
   spec.authors     = ["ahmadabdelhalim"]
   spec.email       = ["ahmadabdelhalimmoustafa@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of UrlShortener."
-  spec.description = "TODO: Description of UrlShortener."
+  spec.homepage    = "https://github.com/ahmadabdelhalim/url_shortener"
+  spec.summary     = "url_shortener is a Rails Engine that makes it easy to create shortened URLs for your rails application."
+  spec.description = "url_shortener is a Rails Engine Gem that makes it easy to create and interpret shortened URLs on your own domain from within your Rails application. Once installed Shortener will generate, store URLS and \"unshorten\" shortened URLs for your application visitors."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
