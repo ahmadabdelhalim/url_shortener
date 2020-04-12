@@ -1,6 +1,7 @@
 class UrlShortener::ShortenedUrl < ActiveRecord::Base
   validates :full_link, presence: true
   after_create :create_shortened_link
+  after_validation :smart_add_url_protocol
 
   private
   # Total: 26 + 26 + 10 = DICT_SIZE chars
@@ -24,5 +25,12 @@ class UrlShortener::ShortenedUrl < ActiveRecord::Base
       n = n / DICT_SIZE
     end
     generated.reverse
+  end
+
+  # in case user didn't input http:// or https://
+  def smart_add_url_protocol
+    unless self.full_link and (self.full_link[/\Ahttp:\/\//] || self.full_link[/\Ahttps:\/\//])
+      self.full_link = "http://#{self.full_link}"
+    end
   end
 end
