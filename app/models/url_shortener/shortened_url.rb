@@ -1,5 +1,6 @@
 class UrlShortener::ShortenedUrl < ActiveRecord::Base
   validates :full_link, presence: true
+  validates :shortened_link, uniqueness: true
   after_create :create_shortened_link
   after_validation :smart_add_url_protocol
 
