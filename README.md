@@ -18,9 +18,17 @@ $ rails generate url_shortener url_shortener
 This generator will create a migration to create the url_shortener_shortened_urls table where your shortened URLs will be stored.
 
 ## Usage
+To instantiate a new object, do the following: 
+```ruby
+  UrlShortener::ShortenedUrl.new
+```
 To generate a Shortened URL object for the URL “example.com” within your controller / models do the following:
 ```ruby
   UrlShortener::ShortenedUrl.create(full_link: "http://example.com")
+```
+To find the object by ID, do the following: 
+```ruby
+  UrlShortener::ShortenedUrl.find(1)
 ```
 To find the full url using the shortend link, do the following:
 ```ruby
