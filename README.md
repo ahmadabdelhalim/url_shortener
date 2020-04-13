@@ -1,5 +1,5 @@
 # UrlShortener
-Url Shortener is a Rails Engine Gem that provides the ability to shorten urls. The gem will generate a migration file and will provide the main functionality for creating short urls and interpreting them as well.
+Url Shortener is a Rails Engine Gem that provides the ability to shorten urls. The gem will generate a migration file and will provide an ActiveRecord model with the functionality to create short urls and interpreting them as well.
 
 ## Installation
 Add this line to your application's Gemfile:
